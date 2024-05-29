@@ -1,14 +1,14 @@
 import "./App.css";
-import Nav from "./Navigation/Nav";
+import Navigation from "./Navigation/Navigation";
 import Products from "./Products/Products";
 import Recomended from "./Recomended/Recomended";
 
 function App() {
     return (
         <div>
-            <Nav />
-            <Products />
+            <Navigation />
             <Recomended />
+            <Products />
         </div>
     );
 }
