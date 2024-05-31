@@ -1,17 +1,17 @@
 import "./Recomended.css";
+import "../index.css";
 
 const Recomended = () => {
     return (
         <div>
-            <h2>
-                <div className="recomended-btns">
-                    <button>All Products</button>
-                    <button>Adidas</button>
-                    <button>Nike</button>
-                    <button>Puma</button>
-                    <button>Vans</button>
-                </div>
-            </h2>
+            <h2 className="recomended-title">Recomended </h2>
+            <div className="recomended-flex">
+                <button className="btns">All Products</button>
+                <button className="btns">Adidas</button>
+                <button className="btns">Nike</button>
+                <button className="btns">Puma</button>
+                <button className="btns">Vans</button>
+            </div>
         </div>
     );
 };
