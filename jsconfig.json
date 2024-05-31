@@ -6,6 +6,7 @@
             "$libs/*": ["src/libs/*"]
         }
     },
+    "js/ts.implicitProjectConfig.checkJs": true,
     "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"],
     "exclude": ["node_modules", "**/node_modules", "dist"]
 }

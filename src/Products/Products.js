@@ -1,8 +1,7 @@
 import "./Products.css";
-import { data as shoes } from "../db/data";
 import Card from "../components/Card";
 
-const Products = () => {
+const Products = ({ shoes }) => {
     return (
         <section className="card-container">
             {shoes.map((shoe) => (
