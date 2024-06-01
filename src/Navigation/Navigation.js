@@ -1,11 +1,18 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Navigation.css";
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
-const Navigation = () => {
+const Navigation = ({ handleInputChange, query }) => {
     return (
         <nav>
             <div className="nav-container">
-                <input type="text" placeholder="Search shoes." />
+                <input
+                    className="search-input"
+                    type="text"
+                    onChange={handleInputChange}
+                    value={query}
+                    placeholder="Enter your search shoes."
+                />
             </div>
             <div className="profile-container">
                 <a href="#">

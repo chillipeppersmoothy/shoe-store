@@ -11,6 +11,7 @@ const Recomended = ({ handleClick }) => {
                 {recomendedBtnsData.map(
                     ({ className, title, value }, index) => (
                         <Button
+                            key={index}
                             handleClick={handleClick}
                             className={className}
                             value={value}
