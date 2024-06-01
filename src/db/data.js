@@ -377,7 +377,7 @@ export const colorsData = [
     {
         value: "",
         name: "color-type",
-        title: "All",
+        title: "All Colors",
     },
     {
         value: "black",
