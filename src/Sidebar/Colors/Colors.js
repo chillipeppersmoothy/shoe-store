@@ -1,30 +1,25 @@
+import { colorsData } from "src/db/data";
 import "./Colors.css";
+import Input from "./../../components/Input";
 
-const Colors = () => {
+const Colors = ({ handleChange }) => {
     return (
         <div>
             <h2 className="sidebar-title colors-title">Colors</h2>
             <div>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>All
-                </label>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>Black
-                </label>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>Blue
-                </label>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>Red
-                </label>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>Green
-                </label>
+                {colorsData.map(
+                    ({ value, name, title, color, border }, index) => (
+                        <Input
+                            key={index}
+                            handleChange={handleChange}
+                            value={value}
+                            name={name}
+                            title={title}
+                            color={color}
+                            border={border}
+                        />
+                    )
+                )}
             </div>
         </div>
     );

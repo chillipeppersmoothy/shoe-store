@@ -1,30 +1,21 @@
 import "./Category.css";
+import { categoryData } from "../../db/data";
+import Input from "../../components/Input";
 
-const Category = () => {
+const Category = ({ handleChange }) => {
     return (
         <div>
             <h2 className="sidebar-title">Category</h2>
             <div>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>All
-                </label>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>Sneakers
-                </label>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>Flats
-                </label>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>Sandals
-                </label>
-                <label className="sidebar-label-container">
-                    <input type="radio" name="category-type" />
-                    <span className="checkmark"></span>Heels
-                </label>
+                {categoryData.map(({ value, name, title }, index) => (
+                    <Input
+                        key={index}
+                        handleChange={handleChange}
+                        value={value}
+                        name={name}
+                        title={title}
+                    />
+                ))}
             </div>
         </div>
     );

@@ -1,14 +1,7 @@
 import "./Products.css";
-import Card from "../components/Card";
 
-const Products = ({ shoes }) => {
-    return (
-        <section className="card-container">
-            {shoes.map((shoe) => (
-                <Card shoe={shoe} />
-            ))}
-        </section>
-    );
+const Products = ({ result }) => {
+    return <section className="card-container">{result}</section>;
 };
 
 export default Products;
