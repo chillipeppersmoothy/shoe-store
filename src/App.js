@@ -8,7 +8,7 @@ import { data as products } from "./db/data";
 import Card from "./components/Card";
 
 function App() {
-    // input Filter
+    // ----------- Input Filter -----------
     const [query, setQuery] = useState("");
 
     const handleInputChange = (event) => {
@@ -20,25 +20,27 @@ function App() {
             product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
     );
 
-    // Radio Filter
+    // ----------- Radio Filtering -----------
     const [selectedCategory, setSelectedCategory] = useState(null);
 
-    const handlChange = (event) => {
+    const handleChange = (event) => {
         setSelectedCategory(event.target.value);
     };
 
-    // Button Filter
+    // ------------ Button Filtering -----------
     const handleClick = (event) => {
         setSelectedCategory(event.target.value);
     };
 
-    const filteredData = (products, selected, query) => {
+    function filteredData(products, selected, query) {
         let filteredProducts = products;
 
+        // Filtering Input Items
         if (query) {
             filteredProducts = filteredItems;
         }
 
+        // Applying selected filter
         if (selected) {
             filteredProducts = filteredProducts.filter(
                 ({ category, color, company, newPrice, title }) =>
@@ -53,13 +55,13 @@ function App() {
         return filteredProducts.map((product, index) => (
             <Card product={product} key={index} />
         ));
-    };
+    }
 
     const result = filteredData(products, selectedCategory, query);
 
     return (
         <div>
-            <Sidebar handlChange={handlChange} />
+            <Sidebar handleChange={handleChange} />
             <Navigation query={query} handleInputChange={handleInputChange} />
             <Recomended handleClick={handleClick} />
             <Products result={result} />
