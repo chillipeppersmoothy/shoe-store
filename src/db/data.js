@@ -318,4 +318,124 @@ export const data = [
     },
 ];
 
-export default data;
+export const categoryData = [
+    {
+        value: "",
+        name: "category-type",
+        title: "All",
+    },
+    {
+        value: "sneakers",
+        name: "category-type",
+        title: "Sneakers",
+    },
+    {
+        value: "flats",
+        name: "category-type",
+        title: "Flats",
+    },
+    {
+        value: "sandals",
+        name: "category-type",
+        title: "Sandals",
+    },
+    {
+        value: "heels",
+        name: "category-type",
+        title: "Heels",
+    },
+];
+
+export const priceData = [
+    {
+        value: "",
+        name: "price-type",
+        title: "All",
+    },
+    {
+        value: "50",
+        name: "price-type",
+        title: "$0-$50",
+    },
+    {
+        value: "100",
+        name: "price-type",
+        title: "$50-$100",
+    },
+    {
+        value: "150",
+        name: "price-type",
+        title: "$100-$150",
+    },
+    {
+        value: "200",
+        name: "price-type",
+        title: "Over $150",
+    },
+];
+
+export const colorsData = [
+    {
+        value: "",
+        name: "color-type",
+        title: "All",
+    },
+    {
+        value: "black",
+        name: "color-type",
+        title: "Black",
+        color: "black",
+        border: "1px solid black",
+    },
+    {
+        value: "blue",
+        name: "color-type",
+        title: "Blue",
+        color: "blue",
+        border: "1px solid black",
+    },
+    {
+        value: "green",
+        name: "color-type",
+        title: "Green",
+        color: "green",
+        border: "1px solid black",
+    },
+    {
+        value: "white",
+        name: "color-type",
+        title: "White",
+        color: "white",
+        border: "1px solid black",
+    },
+    {
+        value: "red",
+        name: "color-type",
+        title: "Red",
+        color: "red",
+        border: "1px solid black",
+    },
+];
+
+export const recomendedBtnsData = [
+    {
+        value: "",
+        title: "Nike",
+        className: "btns",
+    },
+    {
+        value: "Adidas",
+        title: "Adidas",
+        className: "btns",
+    },
+    {
+        value: "Puma",
+        title: "Puma",
+        className: "btns",
+    },
+    {
+        value: "Vans",
+        title: "Vans",
+        className: "btns",
+    },
+];

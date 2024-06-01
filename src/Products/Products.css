@@ -23,9 +23,6 @@
     margin-bottom: 1rem;
 }
 
-.card-details {
-}
-
 .card-title {
     margin-bottom: 1rem;
 }
@@ -48,9 +45,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.price-tag {
 }
 
 .bag-icon {
